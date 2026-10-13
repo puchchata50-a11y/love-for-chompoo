@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#281438">
+  <title>ถึงพี่ชมพู่ 🩷</title>
+  <style>
+    :root {
+      --pink: #ffc4df;
+      --pink-light: #ffe8f3;
+      --lavender: #d9c5ff;
+      --ink: #fff8fc;
+    }
+    * { box-sizing: border-box; }
+    html { min-height: 100%; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: 22px 14px;
+      overflow-x: hidden;
+      color: var(--ink);
+      font-family: "Leelawadee UI", "Tahoma", system-ui, sans-serif;
+      background:
+        radial-gradient(ellipse at 12% 12%, rgba(185, 111, 231, .30), transparent 35%),
+        radial-gradient(ellipse at 90% 84%, rgba(255, 113, 183, .22), transparent 34%),
+        linear-gradient(145deg, #140e23 0%, #2b173b 52%, #391a3b 100%);
+    }
+    .float {
+      position: fixed;
+      z-index: 0;
+      opacity: .42;
+      color: #ffd5ea;
+      pointer-events: none;
+      animation: drift 6s ease-in-out infinite;
+      user-select: none;
+    }
+    .f1 { left: 8%; top: 12%; font-size: 26px; }
+    .f2 { right: 9%; top: 20%; font-size: 20px; animation-delay: -2s; }
+    .f3 { left: 13%; bottom: 14%; font-size: 21px; animation-delay: -3s; }
+    .f4 { right: 11%; bottom: 10%; font-size: 28px; animation-delay: -1s; }
+    .card {
+      z-index: 1;
+      width: min(100%, 620px);
+      padding: clamp(25px, 6vw, 48px);
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 30px;
+      text-align: center;
+      background: linear-gradient(145deg, rgba(255,255,255,.13), rgba(255,255,255,.055));
+      box-shadow: 0 25px 90px rgba(0,0,0,.36), inset 0 1px rgba(255,255,255,.13);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+    }
+    .heart {
+      display: inline-grid;
+      place-items: center;
+      width: 76px;
+      height: 76px;
+      margin-bottom: 15px;
+      border: 1px solid rgba(255,255,255,.23);
+      border-radius: 50%;
+      background: rgba(255,190,222,.12);
+      font-size: 40px;
+      animation: heartbeat 1.7s ease-in-out infinite;
+    }
+    .eyebrow {
+      color: var(--pink);
+      font-size: .78rem;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 12px 0 8px;
+      font-size: clamp(2rem, 8vw, 3.3rem);
+      line-height: 1.2;
+      font-weight: 800;
+      background: linear-gradient(90deg, #fff0f8, #ffc0df, #ded0ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .subtitle { margin: 0 0 25px; color: #e9d9f1; font-size: .98rem; }
+    .message {
+      padding: clamp(20px, 5vw, 30px);
+      border-radius: 20px;
+      border: 1px solid rgba(255,213,235,.19);
+      background: rgba(18, 10, 31, .32);
+      color: #fff5fb;
+      font-size: clamp(1.05rem, 3.7vw, 1.25rem);
+      line-height: 2;
+      overflow-wrap: anywhere;
+    }
+    .signature { margin-top: 24px; color: #ffc8e2; font-size: 1rem; }
+    button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
+      min-height: 48px;
+      max-width: 100%;
+      padding: 13px 22px;
+      border: 0;
+      border-radius: 999px;
+      background: linear-gradient(100deg, #ffd2e8, #e0ccff);
+      color: #381d3e;
+      font: inherit;
+      font-weight: 800;
+      box-shadow: 0 8px 25px rgba(225, 160, 218, .19);
+      cursor: pointer;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    button:hover { transform: translateY(-2px); box-shadow: 0 11px 30px rgba(225,160,218,.28); }
+    button:focus-visible { outline: 3px solid white; outline-offset: 4px; }
+    #extra { min-height: 1.6em; margin-top: 17px; color: #ffe1f0; line-height: 1.7; }
+    .tiny { margin-top: 23px; color: rgba(255,239,249,.55); font-size: .76rem; }
+    @keyframes heartbeat { 0%,100% { transform: scale(1); } 15% { transform: scale(1.09); } 30% { transform: scale(1); } 45% { transform: scale(1.06); } }
+    @keyframes drift { 0%,100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-12px) rotate(8deg); } }
+    @media (max-width: 380px) {
+      body { padding: 14px 10px; }
+      .card { border-radius: 24px; }
+      .heart { width: 64px; height: 64px; font-size: 34px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <span class="float f1" aria-hidden="true">✦</span>
+  <span class="float f2" aria-hidden="true">♡</span>
+  <span class="float f3" aria-hidden="true">✧</span>
+  <span class="float f4" aria-hidden="true">♡</span>
+
+  <main class="card">
+    <div class="heart" aria-hidden="true">🩷</div>
+    <div class="eyebrow">A little note just for you</div>
+    <h1>ถึงพี่ชมพู่</h1>
+    <p class="subtitle">มีข้อความเล็ก ๆ จากใจ อยากให้พี่ได้อ่าน ♡</p>
+
+    <section class="message" aria-label="ข้อความถึงพี่ชมพู่">
+      ทำงานเหนื่อยมั้ยคะ<br>
+      ถ้าเหนื่อยก็มากอดๆนะ<br>
+      ผมอยู่ตรงนี้ข้างคุณเสมอนะคะ<br>
+      รักแฟนนะ🐷🩷
+    </section>
+
+    <div class="signature">ส่งกอดอุ่น ๆ ไปให้เสมอ ♡</div>
+    <button type="button" id="surpriseButton" onclick="showSurprise()">กดรับกอดจากผม 🫂</button>
+    <div id="extra" aria-live="polite"></div>
+    <div class="tiny">ทำขึ้นด้วยความรักและความห่วงใย 💗</div>
+  </main>
+
+  <script>
+    function showSurprise() {
+      const extra = document.getElementById('extra');
+      extra.textContent = 'กอดแน่น ๆ เลยนะพี่ชมพู่ 🫂🩷 พักบ้างนะครับ คนเก่ง';
+      document.getElementById('surpriseButton').textContent = 'ส่งกอดให้อีกครั้ง 💗';
+    }
+  </script>
+</body>
+</html>
